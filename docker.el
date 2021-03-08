@@ -49,20 +49,20 @@
   "Transient for docker."
   :man-page "docker"
   ["Arguments"
-   (5 "H" "Host" "--host " read-string)
-   (5 "Tt" "TLS" "--tls")
-   (5 "Tv" "TLS verify remote" "--tlsverify")
-   (5 "Ta" "TLS CA" "--tlscacert" docker-read-certificate)
-   (5 "Tc" "TLS certificate" "--tlscert" docker-read-certificate)
-   (5 "Tk" "TLS key" "--tlskey" docker-read-certificate)
-   (5 "l" "Log level" "--log-level " docker-read-log-level)]
+   ("-h" "Host" "--host " read-string)
+   ("-t" "TLS" "--tls")
+   ("-v" "TLS verify remote" "--tlsverify")
+   ("-a" "TLS CA" "--tlscacert" docker-read-certificate)
+   ("-c" "TLS certificate" "--tlscert" docker-read-certificate)
+   ("-k" "TLS key" "--tlskey" docker-read-certificate)
+   ("-l" "Log level" "--log-level " docker-read-log-level)]
   ["Docker"
    ("c" "Containers" docker-containers)
    ("i" "Images"     docker-images)
    ("n" "Networks"   docker-networks)
    ("v" "Volumes"    docker-volumes)]
   ["Other"
-   ("C" "Compose"    docker-compose)
+   ("m" "Compose"    docker-compose)
    ("M" "Machines"   docker-machines)])
 
 (provide 'docker)
